@@ -1,6 +1,6 @@
-import marked from "../_snowpack/pkg/marked.js";
-import hljs from "../_snowpack/pkg/highlightjs.js";
-import "../_snowpack/pkg/highlightjs/styles/atom-one-dark.css.proxy.js";
+import marked from "../snowpack/pkg/marked.js";
+import hljs from "../snowpack/pkg/highlightjs.js";
+import "../snowpack/pkg/highlightjs/styles/atom-one-dark.css.proxy.js";
 const params = new URLSearchParams(window.location.search);
 if (!params.has("article")) {
   location.assign("index.html");
