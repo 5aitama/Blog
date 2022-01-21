@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "highlight.js": "./highlightjs.js",
+    "highlight.js/styles/atom-one-dark.css": "./highlightjs/styles/atom-one-dark.css",
+    "marked": "./marked.js"
+  }
+}

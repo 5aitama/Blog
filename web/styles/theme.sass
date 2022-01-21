@@ -182,9 +182,14 @@ html, body
     display: flex
     flex-direction: column
     align-items: center
+    min-height: 100%
+    box-sizing: border-box
 
     .content
         width: 800px
+
+        p
+            line-height: 2rem
     
     .rtn-btn
         color: white
@@ -204,3 +209,18 @@ pre
     padding: 20px
     border-radius: 10px
     background-color: #272727
+
+p
+    img
+        border: none
+        border-radius: 5px
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+        margin: 20px 0
+        width: 100%
+        max-height: 600px
+        object-fit: contain
+
+@media screen and (max-width: 800px)
+    .article
+        .content
+            width: 100%

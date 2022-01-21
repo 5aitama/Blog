@@ -1,0 +1,18 @@
+{
+    "articles": [
+        {
+            "slug": "hello-world",
+            "title": "Hello world",
+            "date": "2022-01-21T12:50:49.207Z",
+            "short": "blablablablabla",
+            "body": "# Hello world\nThe body of the article here (in `Markdown`)...\n\n![](https://blog.comic-con-paris.com/wp-content/uploads/2020/02/rickmorty.png)"
+        },
+        {
+            "slug": "hello-world-2",
+            "title": "Hello world 2",
+            "date": "2022-01-21T12:50:49.207Z",
+            "short": "2blablablablabla",
+            "body": "2The body of the article here (in Markdown)..."
+        }
+    ]
+}

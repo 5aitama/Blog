@@ -1,29 +1,40 @@
 import "./blob/blob";
 
-const cardContainer = document.querySelector(".card-container") as HTMLDivElement;
-
-function GetMaxCardsIn(element: HTMLElement, cardSettings: { width: number, margin: number }) {
-    const extra = 10;
-    return Math.floor(element.clientWidth / (cardSettings.width + cardSettings.margin + extra));
+interface IArticle {
+    slug: string,
+    title: string,
+    date: string,
+    short?: string,
+    body: string, 
 }
 
-function Card() {
+interface IDatabase {
+    articles: IArticle[],
+}
+
+fetch("db.json")
+    .then(res => res.json())
+    .then(data => {
+        let db = (data as IDatabase);
+        
+        const cardContainer = document.querySelector(".card-container") as HTMLDivElement;
+
+        for (let article of db.articles) {
+            cardContainer.insertAdjacentHTML('beforeend', Card(article));
+        }
+    })
+    .catch(e => console.error(`Failed to fetch db.json: ${e}`));
+
+function Card(article: IArticle) {
     return `
     <div class="card">
         <img src="img/wtf.png">
         <div class="descriptions">
-            <h1>Gold Road</h1>
-            <h3>Mon 22 Jul 2021</h3>
-            <p>How to generate procedural road with B...</p>
+            <h1>${article.title}</h1>
+            <h3>${new Date(article.date).toLocaleString('en-US', { dateStyle: "medium" })}</h3>
+            <p>${article.short ?? "none"}</p>
         </div>
-        <a class="button" href="#">Read more</a>
+        <a class="button" href="article.html?article=${article.slug}">Read more</a>
     </div>
     `;
 }
-
-// console.log(GetMaxCardsIn(cardContainer, { width: 300, margin: 40 }));
-
-// const maxCards = Math.max(1, Math.min(3, GetMaxCardsIn(cardContainer, { width: 300, margin: 40 })));
-
-// for (let i = 0; i < maxCards; i++)
-//     cardContainer.insertAdjacentHTML('beforeend', Card());
