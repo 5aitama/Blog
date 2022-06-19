@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const { exec } = require("child_process");
 const { Octokit } = require('octokit');
 
 async function setup() {
