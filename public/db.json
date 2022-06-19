@@ -1,0 +1,11 @@
+{
+    "articles": [
+        {
+            "title": "Je suis un titre d'article",
+            "slug": "je-suis-un-tite-darticle",
+            "description": "Je suis la description d'un article",
+            "content": "# Hello world !\nVoici mon markdown ! Youpi !",
+            "date": "21 Janvier 2022"
+        }
+    ]
+}
