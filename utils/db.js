@@ -1,8 +1,10 @@
+require('dotenv').config();
+
 const { Octokit } = require('octokit');
 
 async function setup() {
     const octokit = new Octokit({
-        auth: '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'
+        auth: process.env.PERSONAL_ACCESS_TOKEN,
     })
 
     const response = await octokit.request('GET /repos/5aitama/Blog/contents/public/db.json');
