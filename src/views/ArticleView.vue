@@ -18,7 +18,7 @@ export default defineComponent({
     },
 
     async mounted() {
-        let db: Database = await fetch("/db.json").then(res => res.json()).catch(_ => {})
+        let db: Database = await fetch("/Blog/db.json").then(res => res.json()).catch(_ => {})
         let article = db.articles.find(article => article.slug == this.$route.params.id);
 
         if (!article) {

@@ -21,7 +21,7 @@ export default defineComponent({
 		const canvas = this.$refs.main_canvas as HTMLCanvasElement;
 		new AnimatedBackground(new Context(canvas)).start();
 
-		this.db = await fetch("/db.json").then(res => res.json()).catch(_ => {})
+		this.db = await fetch("/Blog/db.json").then(res => res.json()).catch(_ => {})
 	},
 });
 </script>
