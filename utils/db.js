@@ -14,8 +14,8 @@ async function setup() {
     await octokit.request('PUT /repos/5aitama/Blog/contents/public/db.json', {
         message: 'Update the db.json',
         committer: {
-            name: 'Admiral サイタマ',
-            email: 'alx.sb@icloud.com'
+            name: process.env.COMMITER_NAME,
+            email: process.env.COMMITER_MAIL,
         },
         content: response.data.content,
         sha: response.data.sha,
