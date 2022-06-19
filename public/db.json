@@ -1,11 +1,1 @@
-{
-    "articles": [
-        {
-            "title": "Je suis un titre d'article",
-            "slug": "je-suis-un-tite-darticle",
-            "description": "Je suis la description d'un article",
-            "content": "# Hello world !\nVoici mon markdown ! Youpi !",
-            "date": "21 Janvier 2022"
-        }
-    ]
-}
+{"articles":[{"title":"Je suis un titre d'article","slug":"je-suis-un-tite-darticle","description":"Je suis la description d'un article","content":"# Hello world !\nVoici mon markdown ! Youpi !","date":"21 Janvier 2022"},{"title":"Another title","slug":"another-title","description":"This is a description","content":"# This is a title\nThis is a content !","date":"June 19, 2022"}]}
