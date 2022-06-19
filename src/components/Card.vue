@@ -20,20 +20,22 @@ export default defineComponent({
 <template>
     <div>
         <img src="@/assets/wtf.png" />
-        <h1>{{ title }}</h1>
         <span>{{ date }}</span>
-        <p>{{ shortDesc }}</p>
+        <h1>{{ title }}</h1>
+        <!-- <p>{{ shortDesc }}</p> -->
         <button ref="readmore">Read more...</button>
     </div>
 </template>
 
 <style scoped>
 div {
+    position: relative;
     background-color: var(--primary-color);
     border:         2px solid rgba(255, 255, 255, 0.02);
     margin:         20px;
     margin-bottom:  50px;
     padding:        10px;
+    padding-bottom: 40px;
     border-radius:  10px;
     text-align:     center;
     width:          250px;
@@ -41,9 +43,12 @@ div {
 
 div h1 {
     margin: 0;
+    font-size: 1.2rem;
 }
 
 div span {
+    margin-top: 10px;
+    display: block;
     font-size: 0.75rem;
     color: rgb(88, 88, 88);
     font-weight: bold;
@@ -55,11 +60,25 @@ div img {
 }
 
 div button {
-    border: none;
-    background: none;
     color: rgb(255, 102, 82);
     cursor: pointer;
     font-size: 0.9rem;
-    margin: 10px 0;
+
+    background-color: var(--primary-color);
+    border: 2px solid rgba(255, 255, 255, 0.02);
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+div button:hover {
+    /* background-color: rgb(46, 46, 46); */
+    color: var(--text-color);
+    border-color: rgb(255, 102, 82);
 }
 </style>
