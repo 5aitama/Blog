@@ -8,8 +8,8 @@ import HStack from './components/HStack.vue';
 		<HStack>
 			<nav>
 				<RouterLink to="/">Home</RouterLink>
-				<RouterLink to="/">🚧 Projects 🚧</RouterLink>
-				<RouterLink to="/">🚧 Contact 🚧</RouterLink>
+				<RouterLink to="/">Projects</RouterLink>
+				<RouterLink to="/">Contact</RouterLink>
 			</nav>
 		</HStack>
 	</header>
@@ -28,9 +28,6 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 1;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	-moz-backdrop-filter: blur(10px);
 }
 
 nav {
@@ -49,6 +46,10 @@ nav a {
 	border-bottom-width: 2px;
 	font-weight: 500;
 	transition: background 0.2s;
+
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	-moz-backdrop-filter: blur(10px);
 }
 
 nav a:hover {
